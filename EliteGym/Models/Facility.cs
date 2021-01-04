@@ -26,6 +26,5 @@ namespace EliteGym.Models
         [Display(Name = "Scheduled Day")]
         public string ScheduleHour { get; set; }
 
-
     }
 }
