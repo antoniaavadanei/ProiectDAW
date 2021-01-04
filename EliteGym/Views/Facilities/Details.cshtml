@@ -1,0 +1,50 @@
+﻿@model EliteGym.Models.Facility
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Facility</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FacilityName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FacilityName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TrainerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TrainerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ScheduleDay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ScheduleDay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ScheduleHour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ScheduleHour)
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to Facilities list", "Index")
+</p>
