@@ -32,5 +32,7 @@ namespace EliteGym.Models
         }
 
         public System.Data.Entity.DbSet<EliteGym.Models.Facility> Facilities { get; set; }
+
+        public System.Data.Entity.DbSet<EliteGym.Models.RoleViewModel> RoleViewModels { get; set; }
     }
 }
