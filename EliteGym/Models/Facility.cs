@@ -23,7 +23,7 @@ namespace EliteGym.Models
         public string ScheduleDay { get; set; }
 
         [Required]
-        [Display(Name = "Scheduled Day")]
+        [Display(Name = "Scheduled Hour")]
         public string ScheduleHour { get; set; }
 
     }

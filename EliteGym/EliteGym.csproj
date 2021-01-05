@@ -207,6 +207,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\blured.jpg" />
+    <Content Include="Images\Desktop-300k-16-9-44.jpg" />
     <Content Include="Images\elitegym1jpg.jpg" />
     <Content Include="Images\elitegym2.jpg" />
     <Content Include="Images\elitegym3.jpg" />

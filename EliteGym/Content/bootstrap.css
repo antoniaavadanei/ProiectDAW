@@ -10,7 +10,8 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 body {
-  margin: 0;
+    background-color: coral;
+    margin: 0;
 }
 article,
 aside,
@@ -1581,10 +1582,11 @@ pre code {
   overflow-y: scroll;
 }
 .container {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: coral;
 }
 @media (min-width: 768px) {
   .container {
