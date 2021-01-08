@@ -173,6 +173,7 @@
     <Compile Include="Controllers\FacilitiesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MembershipsController.cs" />
     <Compile Include="Controllers\RolesController.cs" />
     <Compile Include="Controllers\TrainersController.cs" />
     <Compile Include="Global.asax.cs">
@@ -190,23 +191,24 @@
     <Compile Include="Migrations\202101080016438_addFacilityTable.Designer.cs">
       <DependentUpon>202101080016438_addFacilityTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202101080017230_addTrainerTable.cs" />
-    <Compile Include="Migrations\202101080017230_addTrainerTable.Designer.cs">
-      <DependentUpon>202101080017230_addTrainerTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202101080033442_addTrainerTable1.cs" />
-    <Compile Include="Migrations\202101080033442_addTrainerTable1.Designer.cs">
-      <DependentUpon>202101080033442_addTrainerTable1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\202101080036469_addTrainerTable2.cs" />
     <Compile Include="Migrations\202101080036469_addTrainerTable2.Designer.cs">
       <DependentUpon>202101080036469_addTrainerTable2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101082220055_addTrainerTable.cs" />
+    <Compile Include="Migrations\202101082220055_addTrainerTable.Designer.cs">
+      <DependentUpon>202101082220055_addTrainerTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101082252416_addMembershipTable.cs" />
+    <Compile Include="Migrations\202101082252416_addMembershipTable.Designer.cs">
+      <DependentUpon>202101082252416_addMembershipTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Facility.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Membership.cs" />
     <Compile Include="Models\RoleViewModel.cs" />
     <Compile Include="Models\Trainer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -289,11 +291,11 @@
     <Content Include="Views\Trainers\Details.cshtml" />
     <Content Include="Views\Trainers\Edit.cshtml" />
     <Content Include="Views\Trainers\Index.cshtml" />
-    <Content Include="Views\Customers\Create.cshtml" />
-    <Content Include="Views\Customers\Delete.cshtml" />
-    <Content Include="Views\Customers\Details.cshtml" />
-    <Content Include="Views\Customers\Edit.cshtml" />
-    <Content Include="Views\Customers\Index.cshtml" />
+    <Content Include="Views\Memberships\Create.cshtml" />
+    <Content Include="Views\Memberships\Delete.cshtml" />
+    <Content Include="Views\Memberships\Details.cshtml" />
+    <Content Include="Views\Memberships\Edit.cshtml" />
+    <Content Include="Views\Memberships\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -321,14 +323,14 @@
     <EmbeddedResource Include="Migrations\202101080016438_addFacilityTable.resx">
       <DependentUpon>202101080016438_addFacilityTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101080017230_addTrainerTable.resx">
-      <DependentUpon>202101080017230_addTrainerTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101080033442_addTrainerTable1.resx">
-      <DependentUpon>202101080033442_addTrainerTable1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101080036469_addTrainerTable2.resx">
       <DependentUpon>202101080036469_addTrainerTable2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101082220055_addTrainerTable.resx">
+      <DependentUpon>202101082220055_addTrainerTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101082252416_addMembershipTable.resx">
+      <DependentUpon>202101082252416_addMembershipTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

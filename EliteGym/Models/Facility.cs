@@ -24,5 +24,6 @@ namespace EliteGym.Models
         public string ScheduleHour { get; set; }
 
         public virtual ICollection<Trainer> Trainers { get; set; }
+        public virtual ICollection<Membership> Memberships { get; set; }
     }
 }

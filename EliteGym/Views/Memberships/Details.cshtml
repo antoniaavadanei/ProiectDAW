@@ -1,0 +1,42 @@
+﻿@model EliteGym.Models.Membership
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div>
+    <h4>Membership</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Facility.FacilityName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Facility.FacilityName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MembershipPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MembershipPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MembershipDuration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MembershipDuration)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

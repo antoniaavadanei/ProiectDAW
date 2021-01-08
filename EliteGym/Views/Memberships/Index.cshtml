@@ -1,0 +1,32 @@
+﻿@model IEnumerable<EliteGym.Models.Membership>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Memberships</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+
+    @for (var i = 0; i < Model.Count(); i+=3)
+    {
+        <ul>
+            <li>@Html.DisplayFor(modelItem => Model.ElementAt(i).Facility.FacilityName)</li>
+            @for (var j = 0; j < 3; j++)
+            {
+                <ul>
+                    <li>@Html.DisplayFor(modelItem => Model.ElementAt(i+j).MembershipDuration): @Html.DisplayFor(modelItem => Model.ElementAt(i+j).MembershipPrice) Ron
+
+                        @Html.ActionLink("Edit", "Edit", new { id = Model.ElementAt(i + j).Id }) |
+                        @Html.ActionLink("Details", "Details", new { id = Model.ElementAt(i + j).Id }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = Model.ElementAt(i + j).Id })
+                    </li>
+                </ul>
+            }
+        </ul>
+    }
+  

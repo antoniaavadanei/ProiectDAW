@@ -7,13 +7,13 @@ namespace EliteGym.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class addTrainerTable : IMigrationMetadata
+    public sealed partial class addMembershipTable : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(addTrainerTable));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(addMembershipTable));
         
         string IMigrationMetadata.Id
         {
-            get { return "202101080017230_addTrainerTable"; }
+            get { return "202101082252416_addMembershipTable"; }
         }
         
         string IMigrationMetadata.Source
