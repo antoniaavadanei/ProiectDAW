@@ -170,10 +170,12 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\FacilitiesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\RolesController.cs" />
+    <Compile Include="Controllers\TrainersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -185,16 +187,34 @@
     <Compile Include="Migrations\202101032317232_AddColumnToUsers.designer.cs">
       <DependentUpon>202101032317232_AddColumnToUsers.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202101040035529_addFacilityTable.cs" />
-    <Compile Include="Migrations\202101040035529_addFacilityTable.Designer.cs">
-      <DependentUpon>202101040035529_addFacilityTable.cs</DependentUpon>
+    <Compile Include="Migrations\202101080016438_addFacilityTable.cs" />
+    <Compile Include="Migrations\202101080016438_addFacilityTable.Designer.cs">
+      <DependentUpon>202101080016438_addFacilityTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101080017230_addTrainerTable.cs" />
+    <Compile Include="Migrations\202101080017230_addTrainerTable.Designer.cs">
+      <DependentUpon>202101080017230_addTrainerTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101080033442_addTrainerTable1.cs" />
+    <Compile Include="Migrations\202101080033442_addTrainerTable1.Designer.cs">
+      <DependentUpon>202101080033442_addTrainerTable1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101080036469_addTrainerTable2.cs" />
+    <Compile Include="Migrations\202101080036469_addTrainerTable2.Designer.cs">
+      <DependentUpon>202101080036469_addTrainerTable2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101080052372_addCustomerTable.cs" />
+    <Compile Include="Migrations\202101080052372_addCustomerTable.Designer.cs">
+      <DependentUpon>202101080052372_addCustomerTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Facility.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\RoleViewModel.cs" />
+    <Compile Include="Models\Trainer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -270,6 +290,16 @@
     <Content Include="Views\Roles\Details.cshtml" />
     <Content Include="Views\Roles\Edit.cshtml" />
     <Content Include="Views\Roles\Delete.cshtml" />
+    <Content Include="Views\Trainers\Create.cshtml" />
+    <Content Include="Views\Trainers\Delete.cshtml" />
+    <Content Include="Views\Trainers\Details.cshtml" />
+    <Content Include="Views\Trainers\Edit.cshtml" />
+    <Content Include="Views\Trainers\Index.cshtml" />
+    <Content Include="Views\Customers\Create.cshtml" />
+    <Content Include="Views\Customers\Delete.cshtml" />
+    <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Customers\Edit.cshtml" />
+    <Content Include="Views\Customers\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -294,8 +324,20 @@
     <EmbeddedResource Include="Migrations\202101032317232_AddColumnToUsers.resx">
       <DependentUpon>202101032317232_AddColumnToUsers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101040035529_addFacilityTable.resx">
-      <DependentUpon>202101040035529_addFacilityTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202101080016438_addFacilityTable.resx">
+      <DependentUpon>202101080016438_addFacilityTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101080017230_addTrainerTable.resx">
+      <DependentUpon>202101080017230_addTrainerTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101080033442_addTrainerTable1.resx">
+      <DependentUpon>202101080033442_addTrainerTable1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101080036469_addTrainerTable2.resx">
+      <DependentUpon>202101080036469_addTrainerTable2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101080052372_addCustomerTable.resx">
+      <DependentUpon>202101080052372_addCustomerTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

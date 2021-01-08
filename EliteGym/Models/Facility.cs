@@ -14,9 +14,6 @@ namespace EliteGym.Models
         [Display(Name="Facility")]
         public string FacilityName { get; set; }
 
-        [Required]
-        [Display(Name = "Trainer Name")]
-        public string TrainerName { get; set; }
 
         [Required]
         [Display(Name = "Scheduled Day")]
@@ -26,5 +23,6 @@ namespace EliteGym.Models
         [Display(Name = "Scheduled Hour")]
         public string ScheduleHour { get; set; }
 
+        public virtual ICollection<Trainer> Trainers { get; set; }
     }
 }
