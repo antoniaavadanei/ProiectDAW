@@ -37,6 +37,5 @@ namespace EliteGym.Models
 
         public System.Data.Entity.DbSet<EliteGym.Models.Trainer> Trainers { get; set; }
 
-        public System.Data.Entity.DbSet<EliteGym.Models.Customer> Customers { get; set; }
     }
 }

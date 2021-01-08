@@ -170,7 +170,6 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\FacilitiesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -203,13 +202,8 @@
     <Compile Include="Migrations\202101080036469_addTrainerTable2.Designer.cs">
       <DependentUpon>202101080036469_addTrainerTable2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202101080052372_addCustomerTable.cs" />
-    <Compile Include="Migrations\202101080052372_addCustomerTable.Designer.cs">
-      <DependentUpon>202101080052372_addCustomerTable.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Facility.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -335,9 +329,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101080036469_addTrainerTable2.resx">
       <DependentUpon>202101080036469_addTrainerTable2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101080052372_addCustomerTable.resx">
-      <DependentUpon>202101080052372_addCustomerTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
