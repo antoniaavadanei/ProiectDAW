@@ -1,0 +1,51 @@
+﻿@model EliteGym.Models.BuyMembership
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BuyMembership</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ApplicationUser.UserType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApplicationUser.UserType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Facility.FacilityName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Facility.FacilityName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Membership.MembershipDuration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Membership.MembershipDuration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PurchaseDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PurchaseDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -13,7 +13,7 @@ namespace EliteGym.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202101082252416_addMembershipTable"; }
+            get { return "202101091824552_addMembershipTable"; }
         }
         
         string IMigrationMetadata.Source

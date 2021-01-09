@@ -17,8 +17,7 @@ namespace EliteGym.Controllers
         // GET: Memberships
         public ActionResult Index()
         {
-            var memberships = db.Memberships.Include(m => m.Facility);
-            return View(memberships.ToList());
+            return View(db.Memberships.ToList());
         }
 
         // GET: Memberships/Details/5
@@ -39,7 +38,6 @@ namespace EliteGym.Controllers
         // GET: Memberships/Create
         public ActionResult Create()
         {
-            ViewBag.FacilityId = new SelectList(db.Facilities, "Id", "FacilityName");
             return View();
         }
 
@@ -48,7 +46,7 @@ namespace EliteGym.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,MembershipPrice,MembershipDuration,FacilityId")] Membership membership)
+        public ActionResult Create([Bind(Include = "Id,MembershipDuration,MembershipPrice")] Membership membership)
         {
             if (ModelState.IsValid)
             {
@@ -57,7 +55,6 @@ namespace EliteGym.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.FacilityId = new SelectList(db.Facilities, "Id", "FacilityName", membership.FacilityId);
             return View(membership);
         }
 
@@ -73,7 +70,6 @@ namespace EliteGym.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.FacilityId = new SelectList(db.Facilities, "Id", "FacilityName", membership.FacilityId);
             return View(membership);
         }
 
@@ -82,7 +78,7 @@ namespace EliteGym.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,MembershipPrice,MembershipDuration,FacilityId")] Membership membership)
+        public ActionResult Edit([Bind(Include = "Id,MembershipDuration,MembershipPrice")] Membership membership)
         {
             if (ModelState.IsValid)
             {
@@ -90,7 +86,6 @@ namespace EliteGym.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.FacilityId = new SelectList(db.Facilities, "Id", "FacilityName", membership.FacilityId);
             return View(membership);
         }
 

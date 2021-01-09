@@ -170,6 +170,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BuyMembershipsController.cs" />
     <Compile Include="Controllers\FacilitiesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -199,12 +200,17 @@
     <Compile Include="Migrations\202101082220055_addTrainerTable.Designer.cs">
       <DependentUpon>202101082220055_addTrainerTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202101082252416_addMembershipTable.cs" />
-    <Compile Include="Migrations\202101082252416_addMembershipTable.Designer.cs">
-      <DependentUpon>202101082252416_addMembershipTable.cs</DependentUpon>
+    <Compile Include="Migrations\202101091824552_addMembershipTable.cs" />
+    <Compile Include="Migrations\202101091824552_addMembershipTable.Designer.cs">
+      <DependentUpon>202101091824552_addMembershipTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101091919022_addBuyMembershipTable.cs" />
+    <Compile Include="Migrations\202101091919022_addBuyMembershipTable.Designer.cs">
+      <DependentUpon>202101091919022_addBuyMembershipTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\BuyMembership.cs" />
     <Compile Include="Models\Facility.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -296,6 +302,11 @@
     <Content Include="Views\Memberships\Details.cshtml" />
     <Content Include="Views\Memberships\Edit.cshtml" />
     <Content Include="Views\Memberships\Index.cshtml" />
+    <Content Include="Views\BuyMemberships\Create.cshtml" />
+    <Content Include="Views\BuyMemberships\Delete.cshtml" />
+    <Content Include="Views\BuyMemberships\Details.cshtml" />
+    <Content Include="Views\BuyMemberships\Edit.cshtml" />
+    <Content Include="Views\BuyMemberships\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -329,8 +340,11 @@
     <EmbeddedResource Include="Migrations\202101082220055_addTrainerTable.resx">
       <DependentUpon>202101082220055_addTrainerTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101082252416_addMembershipTable.resx">
-      <DependentUpon>202101082252416_addMembershipTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202101091824552_addMembershipTable.resx">
+      <DependentUpon>202101091824552_addMembershipTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101091919022_addBuyMembershipTable.resx">
+      <DependentUpon>202101091919022_addBuyMembershipTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

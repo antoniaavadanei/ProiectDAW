@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System.Collections.Generic;
+using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
@@ -10,6 +11,8 @@ namespace EliteGym.Models
     public class ApplicationUser : IdentityUser
     {
         public string UserType { get; set; }
+        public virtual ICollection<BuyMembership> BuyMemberships { get; set; }
+
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
@@ -38,5 +41,9 @@ namespace EliteGym.Models
         public System.Data.Entity.DbSet<EliteGym.Models.Trainer> Trainers { get; set; }
 
         public System.Data.Entity.DbSet<EliteGym.Models.Membership> Memberships { get; set; }
+
+        public System.Data.Entity.DbSet<EliteGym.Models.BuyMembership> BuyMemberships { get; set; }
+
+        //public System.Data.Entity.DbSet<EliteGym.Models.ApplicationUser> ApplicationUsers { get; set; }
     }
 }
