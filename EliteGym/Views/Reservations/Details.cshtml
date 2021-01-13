@@ -1,22 +1,21 @@
-﻿@model EliteGym.Models.BuyMembership
+﻿@model EliteGym.Models.Reservation
 
 @{
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h2>Details</h2>
+<br />
 
 <div>
-    <h4>BuyMembership</h4>
+    <h4>Reservation</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.ApplicationUser.UserType)
+            @Html.DisplayNameFor(model => model.ApplicationUser.UserName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.ApplicationUser.UserType)
+            @Html.DisplayFor(model => model.ApplicationUser.UserName)
         </dd>
 
         <dt>
@@ -36,11 +35,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.PurchaseDate)
+            @Html.DisplayNameFor(model => model.ReservationDate)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.PurchaseDate)
+            @Html.DisplayFor(model => model.ReservationDate)
         </dd>
 
     </dl>

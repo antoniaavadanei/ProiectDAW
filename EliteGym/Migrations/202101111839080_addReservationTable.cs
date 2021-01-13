@@ -3,16 +3,16 @@ namespace EliteGym.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class addBuyMembershipTable : DbMigration
+    public partial class addReservationTable : DbMigration
     {
         public override void Up()
         {
             CreateTable(
-                "dbo.BuyMemberships",
+                "dbo.Reservations",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        PurchaseDate = c.DateTime(nullable: false),
+                        ReservationDate = c.DateTime(nullable: false),
                         MembershipId = c.Int(nullable: false),
                         FacilityId = c.Int(nullable: false),
                         ApplicationUserId = c.String(maxLength: 128),
@@ -29,13 +29,13 @@ namespace EliteGym.Migrations
         
         public override void Down()
         {
-            DropForeignKey("dbo.BuyMemberships", "MembershipId", "dbo.Memberships");
-            DropForeignKey("dbo.BuyMemberships", "FacilityId", "dbo.Facilities");
-            DropForeignKey("dbo.BuyMemberships", "ApplicationUserId", "dbo.AspNetUsers");
-            DropIndex("dbo.BuyMemberships", new[] { "ApplicationUserId" });
-            DropIndex("dbo.BuyMemberships", new[] { "FacilityId" });
-            DropIndex("dbo.BuyMemberships", new[] { "MembershipId" });
-            DropTable("dbo.BuyMemberships");
+            DropForeignKey("dbo.Reservations", "MembershipId", "dbo.Memberships");
+            DropForeignKey("dbo.Reservations", "FacilityId", "dbo.Facilities");
+            DropForeignKey("dbo.Reservations", "ApplicationUserId", "dbo.AspNetUsers");
+            DropIndex("dbo.Reservations", new[] { "ApplicationUserId" });
+            DropIndex("dbo.Reservations", new[] { "FacilityId" });
+            DropIndex("dbo.Reservations", new[] { "MembershipId" });
+            DropTable("dbo.Reservations");
         }
     }
 }

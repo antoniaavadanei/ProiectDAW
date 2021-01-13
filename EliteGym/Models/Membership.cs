@@ -18,7 +18,7 @@ namespace EliteGym.Models
         [Display(Name = "Price(RON)")]
         public int MembershipPrice { get; set; }
 
-        public virtual ICollection<BuyMembership> BuyMemberships { get; set; }
+        public virtual ICollection<Reservation> Reservations { get; set; }
 
     }
 }

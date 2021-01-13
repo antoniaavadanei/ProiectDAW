@@ -6,15 +6,15 @@ using System.Web;
 
 namespace EliteGym.Models
 {
-    public class BuyMembership
+    public class Reservation
     {
         public int Id { get; set; }
 
         [Required]
-        [Display(Name = "Purchase date")]
+
         [DataType(DataType.Date)]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
-        public DateTime PurchaseDate { get; set; }
+        [Display(Name = "Starting Date")]
+        public DateTime ReservationDate { get; set; }
 
         public int MembershipId { get; set; }
 

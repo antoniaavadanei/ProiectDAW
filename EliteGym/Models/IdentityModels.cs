@@ -11,7 +11,10 @@ namespace EliteGym.Models
     public class ApplicationUser : IdentityUser
     {
         public string UserType { get; set; }
-        public virtual ICollection<BuyMembership> BuyMemberships { get; set; }
+        //public virtual ICollection<GetMembership> GetMemberships { get; set; }
+
+        public virtual ICollection<Reservation> Reservations { get; set; }
+
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
@@ -42,8 +45,15 @@ namespace EliteGym.Models
 
         public System.Data.Entity.DbSet<EliteGym.Models.Membership> Memberships { get; set; }
 
-        public System.Data.Entity.DbSet<EliteGym.Models.BuyMembership> BuyMemberships { get; set; }
+        public System.Data.Entity.DbSet<EliteGym.Models.Reservation> Reservations { get; set; }
+
+        public System.Data.Entity.DbSet<EliteGym.Models.Review> Reviews { get; set; }
 
         //public System.Data.Entity.DbSet<EliteGym.Models.ApplicationUser> ApplicationUsers { get; set; }
+
+        //public System.Data.Entity.DbSet<EliteGym.Models.GetMembership> GetMemberships { get; set; }
+
+        //public System.Data.Entity.DbSet<EliteGym.Models.ApplicationUser> ApplicationUsers { get; set; }
+
     }
 }

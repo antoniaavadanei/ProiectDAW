@@ -23,8 +23,10 @@ namespace EliteGym.Models
         [Display(Name = "Scheduled Hour")]
         public string ScheduleHour { get; set; }
 
+        public virtual Review Review { get; set; }
+
         public virtual ICollection<Trainer> Trainers { get; set; }
-        public virtual ICollection<BuyMembership> BuyMemberships { get; set; }
+        public virtual ICollection<Reservation> Reservations { get; set; }
 
     }
 }
