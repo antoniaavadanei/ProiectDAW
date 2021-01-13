@@ -10,17 +10,20 @@ using EliteGym.Models;
 
 namespace EliteGym.Controllers
 {
+    [Authorize(Roles = "Administrator")]
     public class MembershipsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Memberships
+        [AllowAnonymous]
         public ActionResult Index()
         {
             return View(db.Memberships.ToList());
         }
 
         // GET: Memberships/Details/5
+        [AllowAnonymous]
         public ActionResult Details(int? id)
         {
             if (id == null)

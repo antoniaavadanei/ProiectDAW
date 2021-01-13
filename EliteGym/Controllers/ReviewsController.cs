@@ -10,11 +10,13 @@ using EliteGym.Models;
 
 namespace EliteGym.Controllers
 {
+    [Authorize]
     public class ReviewsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Reviews
+        [AllowAnonymous]
         public ActionResult Index()
         {
             var reviews = db.Reviews.Include(r => r.Facility);

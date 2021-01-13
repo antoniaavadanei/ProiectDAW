@@ -10,11 +10,13 @@ using EliteGym.Models;
 
 namespace EliteGym.Controllers
 {
+    [Authorize]
     public class ReservationsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Reservations
+
         public ActionResult Index()
         {
             var reservations = db.Reservations.Include(r => r.ApplicationUser).Include(r => r.Facility).Include(r => r.Membership);
