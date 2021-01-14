@@ -50,6 +50,7 @@ namespace EliteGym.Models
     {
         [Required]
         [Display(Name = "UserName")]
+        [RegularExpression(@"^[a-zA-Z0-9-_]{3,30}$", ErrorMessage = "Between 3 and 30 characters allowed (a-z, A-Z, 0-9)")]
         public string UserName { get; set; }
 
         [Required]
@@ -65,6 +66,7 @@ namespace EliteGym.Models
     {
         [Required]
         [Display(Name ="UserName")]
+        [RegularExpression(@"^[a-zA-Z0-9-_]{3,30}$", ErrorMessage = "Between 3 and 30 characters allowed (a-z, A-Z, 0-9)")]
         public string UserName { get; set; }
 
         [Required]

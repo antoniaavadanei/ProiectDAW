@@ -64,6 +64,7 @@ namespace EliteGym.Controllers
         }
 
         // GET: Reviews/Edit/5
+        [Authorize(Roles = "Administrator")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -97,6 +98,7 @@ namespace EliteGym.Controllers
         }
 
         // GET: Reviews/Delete/5
+        [Authorize(Roles = "Administrator")]
         public ActionResult Delete(int? id)
         {
             if (id == null)

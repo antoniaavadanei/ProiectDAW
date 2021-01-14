@@ -12,6 +12,7 @@ namespace EliteGym.Models
 
         [Required]
         [Display(Name="Trainer Name")]
+        [RegularExpression(@"^[a-zA-Z]{3,30}$", ErrorMessage = "Between 3 and 30 characters allowed (a-z, A-Z)")]
         public string Name { get; set; }
 
         public int FacilityId { get; set; }

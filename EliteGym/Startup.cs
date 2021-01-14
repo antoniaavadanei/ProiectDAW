@@ -21,9 +21,9 @@ namespace EliteGym
             var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(db));
             var userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
             IdentityRole role = new IdentityRole();
-            if (!roleManager.RoleExists("Admin"))
+            if (!roleManager.RoleExists("Administrator"))
             {
-                role.Name = "Admin";
+                role.Name = "Administrator";
                 roleManager.Create(role);
 
                 ApplicationUser user = new ApplicationUser();
@@ -33,7 +33,7 @@ namespace EliteGym
                 var Check = userManager.Create(user, "John2021");
                 if(Check.Succeeded)
                 {
-                    userManager.AddToRole(user.Id, "Admin");
+                    userManager.AddToRole(user.Id, "Administrator");
                 }
                 else 
                 {

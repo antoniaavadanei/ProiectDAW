@@ -6,12 +6,20 @@ using System.Web;
 
 namespace EliteGym.Models
 {
+    public class CustomDateRangeAttribute : RangeAttribute
+    {
+        public CustomDateRangeAttribute()
+          : base(typeof(DateTime),
+                DateTime.Now.ToShortDateString(),
+                DateTime.Now.AddDays(7).ToShortDateString())
+        { }
+    }
     public class Reservation
     {
         public int Id { get; set; }
 
         [Required]
-
+        [CustomDateRange]
         [DataType(DataType.Date)]
         [Display(Name = "Starting Date")]
         public DateTime ReservationDate { get; set; }

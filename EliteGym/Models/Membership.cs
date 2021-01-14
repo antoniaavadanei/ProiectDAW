@@ -12,9 +12,11 @@ namespace EliteGym.Models
    
         [Required]
         [Display(Name = "Duration")]
+        [RegularExpression(@"^[a-zA-Z0-9]{3,30}$", ErrorMessage = "Between 3 and 30 characters allowed (a-z, A-Z,0-9)")]
         public string MembershipDuration { get; set; }
 
         [Required]
+        [Range(0,1000)]
         [Display(Name = "Price(RON)")]
         public int MembershipPrice { get; set; }
 

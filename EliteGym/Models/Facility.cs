@@ -12,15 +12,18 @@ namespace EliteGym.Models
 
         [Required]
         [Display(Name="Facility")]
+        [RegularExpression(@"^[a-zA-Z]{3,30}$", ErrorMessage = "Between 3 and 30 characters allowed (a-z, A-Z)")]
         public string FacilityName { get; set; }
 
 
         [Required]
         [Display(Name = "Scheduled Day")]
+        [RegularExpression(@"^[a-zA-Z]{3,30}$", ErrorMessage = "Between 3 and 30 characters allowed (a-z, A-Z)")]
         public string ScheduleDay { get; set; }
 
         [Required]
         [Display(Name = "Scheduled Hour")]
+        [RegularExpression(@"^[0-9'\s-]{3,30}$", ErrorMessage = "Between 3 and 30 characters allowed (0-9)")]
         public string ScheduleHour { get; set; }
 
         public virtual Review Review { get; set; }
